@@ -3,7 +3,7 @@ templateKey: index-page
 title: به مجله‌ی توسعه دهندگان خوش آمدید
 image: /img/marketing-big-data-examples-applications.jpg
 heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+subheading: اینجا پاتوق برنامه‌نویس‌ها است...
 mainpitch:
   title: Why Kaldi
   description: >
