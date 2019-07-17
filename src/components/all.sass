@@ -1,14 +1,28 @@
 @import "~bulma/sass/utilities/initial-variables"
-
+@import url(//fonts.googleapis.com/earlyaccess/notonaskharabic.css); 
 // Config vars
 // Kaldi logo brand color: #FD461E
 $kaldi-red: #D64000
+$kaldi-blue: #003399
+$kaldi-blue-invert: #fff
 $kaldi-red-invert: #fff
 
-$primary: $kaldi-red
-$primary-invert: $kaldi-red-invert
+$primary: $kaldi-blue
+$primary-invert: $kaldi-blue-invert
 $body-color: #333
 $black: #2b2523
+$font: 'Noto Naskh Arabic', serif
+
+
+html
+  direction: rtl
+
+pre
+  direction: ltr !important
+  text-align: left
+
+h1, h2, h3, h4, h5, h6, p, span, header
+  font-family: $font !important
 
 .navbar .navbar-menu
   box-shadow:none !important
@@ -16,12 +30,12 @@ $black: #2b2523
 .content .taglist
   list-style: none
   margin-bottom: 0
-  margin-left: 0
-  margin-right: 1.5rem
+  margin-right: 0
+  margin-left: 1.5rem
   margin-top: 1.5rem
   display: flex
   flex-wrap: wrap
-  justify-content: left
+  justify-content: right
   align-items: center
   li
     padding: 0 2rem 1rem 0
@@ -33,8 +47,8 @@ $black: #2b2523
   width: 100vw
   height: 400px
   position: relative
-  left: 50%
   right: 50%
+  left: 50%
   margin: 2em -50vw
   background-size: cover
   background-position: bottom
@@ -64,7 +78,7 @@ $black: #2b2523
     color: #CC3700
     text-align: center
     -webkit-box-shadow: inset 0 0 0 2px #CC3700
-    box-shadow: inset 0 0 0 2px #f40
+    box-shadow: inset 0 0 0 2px #003399
     -webkit-transition: all .15s ease
     transition: all .15s ease
 
@@ -90,16 +104,16 @@ $menu-item-hover-color: $black !important
 $menu-item-hover-background-color: $black
 $menu-item-active-color: $kaldi-red-invert
 $menu-item-active-background-color:	$kaldi-red-invert
-$menu-list-border-left: 1px solid $kaldi-red-invert
+$menu-list-border-right: 1px solid $kaldi-red-invert
 $menu-label-color: $white-ter
 
 
 .menu-label
   font-size: 1em !important
-  text-align: left
+  text-align: right
 .menu-list
   list-style: none !important
-  text-align: left
+  text-align: right
 .social
   padding: 2em
 .social a
@@ -120,11 +134,10 @@ $menu-label-color: $white-ter
   margin-bottom: 1em;
 .blog-list-item .featured-thumbnail
   flex-basis: 35%;
-  margin: 0 1.5em 0 0;
+  margin: 0 0 0 1.5em;
 
 
 @import "~bulma"
-
 
 // responsiveness
 +tablet-only
@@ -137,4 +150,6 @@ $menu-label-color: $white-ter
   .blog-list-item .featured-thumbnail
     text-align: center;
     max-width: 70%;
-    margin: 0 0 1em;
+    margin: 0 10em 0 0;
+
+
